@@ -1,0 +1,20 @@
+name: Build ConnectivityCustomizer15
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: macos-13
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Theos
+        run: git clone --recursive https://github.com/theos/theos.git "$HOME/theos"
+      - name: Build
+        env:
+          THEOS: ${{ github.workspace }}/../theos
+        run: make clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ConnectivityCustomizer15-deb
+          path: packages/*.deb

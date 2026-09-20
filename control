@@ -1,0 +1,9 @@
+Package: com.daviddios.connectivitycustomizer15
+Name: ConnectivityCustomizer15
+Version: 0.1.0
+Architecture: iphoneos-arm64
+Description: iOS 15 Control Center Connectivity Module customizer.
+Maintainer: David Dios Hayoz
+Author: David Dios Hayoz
+Section: Tweaks
+Depends: mobilesubstrate

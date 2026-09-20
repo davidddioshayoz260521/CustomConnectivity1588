@@ -1,0 +1,8 @@
+{
+ entry = {
+  bundle = "ConnectivityCustomizer15Prefs";
+  cell = PSLinkCell;
+  detail = "ConnectivityCustomizer15Prefs";
+  label = "Connectivity Customizer 15";
+ };
+}
